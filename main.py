@@ -23,7 +23,13 @@ play_data[start_idx : start_idx + len(test_signal)] = test_signal
 delay_times = []
 for i in range(num_tests):
     # 再生 & 録音
-    recorded_signal = sd.playrec(play_data, samplerate=fs, channels=1, dtype="float64")
+    recorded_signal = sd.playrec(
+        play_data,
+        samplerate=fs,
+        channels=1,
+        dtype="float64",
+        latency="low",
+    )
     sd.wait()
 
     # クロス相関による遅延時間の計算
