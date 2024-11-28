@@ -8,5 +8,12 @@ uv sync
 uv run main.py
 ```
 
+or 
+
+```sh
+pip install -r requirements.txt
+python main.py
+```
+
 ## ライセンス
 [MIT](LICENSE)
